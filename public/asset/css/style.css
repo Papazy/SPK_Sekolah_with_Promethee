@@ -1,0 +1,66 @@
+.navbar-brand {
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+}
+
+.navbar .dropdown-menu {
+  min-width: 150px;
+}
+
+.custom-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* supaya di atas semua */
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateX(100%); /* start dari kanan */
+  animation: fadeInRight 0.5s forwards;
+}
+
+/* Animasi masuk */
+@keyframes fadeInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animasi keluar */
+@keyframes fadeOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Class untuk animasi keluar */
+.fade-out {
+  animation: fadeOutRight 0.5s forwards;
+}
+
+/* Success Toast (Hijau) */
+.toast-success {
+  background-color: #28a745;
+}
+
+/* Error Toast (Merah) */
+.toast-error {
+  background-color: #dc3545;
+}
+
+/* Deleted Toast (Kuning) */
+.toast-deleted {
+  background-color: #ffc107;
+}
